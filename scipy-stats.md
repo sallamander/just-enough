@@ -29,9 +29,11 @@ uniform = scs.uniform(scale = a, loc = b) # Variable that holds the uniform dist
 ##### Useful Distribution Methods
 ```Python
 dist.rvs(size = n) # return n random variates that follow distribution dist. 
-dist.pdf(x) # Return the pdf of x in distribution dist. 
-dist.cdf(x) # Return the cdf of x in distribution dist. 
-dist.sf(x) # Returns survival function (1 - cdf) of x in distribution dist. 
+dist.pdf(x) # Return the pdf of x in distribution dist.  basically only used with plotting
+dist.pmf(x) # Return the pmf of x when discrete P(X=x). This is common to need the prob of a specific event.
+dist.cdf(x) # Return the cdf of x in distribution dist. P(X le x)
+dist.sf(x) # Returns survival function (1 - cdf) of x in distribution dist. P(X > x)
+dist.ppf(x) # Gives the quantile - you provide the percentage to the function
 ```
 
 ## Standard Error
